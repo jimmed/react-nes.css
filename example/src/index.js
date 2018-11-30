@@ -71,7 +71,7 @@ function Demo() {
         </h1>
         <p>
           A React UI library, based on{" "}
-          <Link href="https://npmjs.com/packages/nes.css">NES.css</Link>.
+          <Link href="https://npmjs.com/package/nes.css">NES.css</Link>.
         </p>
       </header>
       <main>
