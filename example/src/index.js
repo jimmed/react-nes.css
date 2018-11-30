@@ -30,9 +30,41 @@ function Link({ href, children, ...props }) {
   );
 }
 
+function GithubLink() {
+  return (
+    <Link
+      style={{
+        position: "fixed",
+        top: 10,
+        right: 10,
+        zIndex: 999,
+        display: "flex",
+        color: "#333"
+      }}
+      href="https://github.com/jimmed/react-nes.css"
+    >
+      <Balloon
+        style={{
+          padding: "0.2rem 0.5rem",
+          alignSelf: "flex-start",
+          fontSize: "0.8rem",
+          textDecoration: "none"
+        }}
+        fromRight
+      >
+        Fork me
+        <br />
+        on GitHub!
+      </Balloon>
+      <Octocat style={{ alignSelf: "flex-end" }} animate />
+    </Link>
+  );
+}
+
 function Demo() {
   return (
     <main>
+      <GithubLink />
       <header>
         <h1>
           <Controller type="snes" /> React-NES.css
