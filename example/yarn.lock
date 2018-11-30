@@ -1617,6 +1617,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.6:
+  version "2.2.6"
+  resolved "https://npm.v2.mudano.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
+
 clean-css@4.2.x:
   version "4.2.1"
   resolved "https://npm.v2.mudano.com/clean-css/-/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
@@ -5185,6 +5190,11 @@ neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://npm.v2.mudano.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
+
+nes.css@^0.0.2:
+  version "0.0.2"
+  resolved "https://npm.v2.mudano.com/nes.css/-/nes.css-0.0.2.tgz#9885ea94b307f00121a97e514272ff430199874e"
+  integrity sha512-ErvAwiw1R4QNwA1Hkd87PPS3tA0DTehqrKniOBmH8euj7E5fAtv8LgYMWgsN5N50lqctVRZ1J05PxTHrAuI1Hg==
 
 next-tick@1:
   version "1.0.0"

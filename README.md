@@ -1,8 +1,8 @@
 # react-nes.css
 
-> A React UI library, based on NES.css
+> A React UI library, based on [NES.css][nes]
 
-[![NPM](https://img.shields.io/npm/v/react-nes.css.svg)](https://www.npmjs.com/package/react-nes.css) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-nes.css.svg)](https://www.npmjs.com/package/react-nes.css)
 
 ## Install
 
@@ -12,20 +12,9 @@ npm install --save react-nes.css
 
 ## Usage
 
-```tsx
-import * as React from 'react'
+> TODO in more detail
 
-import MyComponent from 'react-nes.css'
+1. Add [NES.css][nes]' CSS to your application root
+2. Import a component and go!
 
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
-
-## License
-
-UNLICENSE © [jimmed](https://github.com/jimmed)
+[nes]: https://www.npmjs.com/package/nes.css
