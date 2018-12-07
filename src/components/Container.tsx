@@ -1,7 +1,7 @@
 import cx from "classnames";
 import * as React from "react";
 
-export interface CheckboxProps {
+export interface ContainerProps {
   children: React.ReactNode;
   title: string;
   center: boolean;
@@ -10,7 +10,7 @@ export interface CheckboxProps {
   className: string;
 }
 
-const Checkbox: React.SFC<CheckboxProps> = ({
+const Container: React.SFC<ContainerProps> = ({
   children,
   title,
   center = false,
@@ -40,4 +40,4 @@ const Checkbox: React.SFC<CheckboxProps> = ({
   );
 };
 
-export default Checkbox;
+export default Container;
