@@ -1,15 +1,17 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
-export type OctocatProps = {
+export interface OctocatProps {
   className: string;
   animate: boolean;
-};
+}
 
-export default function Octocat({
+const Octocat: React.SFC<OctocatProps> = ({
   className,
   animate = false,
   ...props
-}: OctocatProps) {
-  return <i className={cx("octocat", { animate }, className)} {...props} />;
-}
+}) => (
+    <i className={cx("octocat", { animate }, className)} {...props} />
+  );
+
+export default Octocat;

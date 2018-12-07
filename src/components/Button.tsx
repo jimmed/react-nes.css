@@ -1,16 +1,16 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
-export type ButtonProps = {
+export interface ButtonProps {
   children: React.ReactNode;
   primary: boolean;
   success: boolean;
   warning: boolean;
   error: boolean;
   className: string;
-};
+}
 
-export default function Button({
+const Button: React.SFC<ButtonProps> = ({
   children,
   primary = false,
   success = false,
@@ -18,22 +18,22 @@ export default function Button({
   error = false,
   className,
   ...props
-}: ButtonProps) {
-  return (
-    <button
-      className={cx(
-        "btn",
-        {
-          "is-primary": primary,
-          "is-success": success,
-          "is-warning": warning,
-          "is-error": error
-        },
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-}
+}) => (
+  <button
+    className={cx(
+      "btn",
+      {
+        "is-error": error,
+        "is-primary": primary,
+        "is-success": success,
+        "is-warning": warning,
+      },
+      className,
+    )}
+    {...props}
+  >
+    {children}
+  </button>
+);
+
+export default Button;

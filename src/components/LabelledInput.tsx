@@ -1,23 +1,21 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
-export type LabelledInputProps = {
+export interface LabelledInputProps {
   children: React.ReactNode;
   className: string;
-};
+}
 
-export default function LabelledInput({
+const LabelledInput: React.SFC<LabelledInputProps & { type: "radio" | "checkbox" }> = ({
   children,
   type,
   className,
   ...props
-}: LabelledInputProps & {
-  type: "radio" | "checkbox";
-}) {
-  return (
+}) => (
     <label>
       <input type={type} className={cx(type, className)} {...props} />
       <span>{children}</span>
     </label>
   );
-}
+
+export default LabelledInput;
