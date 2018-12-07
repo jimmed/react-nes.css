@@ -1,9 +1,10 @@
 import * as React from "react";
 
-export type ControllerProps = {
+export interface ControllerProps {
   className: string;
-};
-
-export default function Controller({ className, ...props }: ControllerProps) {
-  return <i className="nes-logo" {...props} />;
 }
+
+const Controller: React.SFC<ControllerProps> = ({ className, ...props }) => (<i className="nes-logo" {...props} />);
+
+export default Controller;
+

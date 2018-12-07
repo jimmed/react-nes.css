@@ -1,7 +1,7 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
-export type TextInputProps = {
+export interface TextInputProps {
   label: string;
   name: string;
   type: string;
@@ -10,9 +10,10 @@ export type TextInputProps = {
   warning: boolean;
   error: boolean;
   className: string;
-};
+}
 
-export default function TextInput({
+
+const TextInput: React.SFC<TextInputProps> = ({
   label,
   name,
   type = "text",
@@ -22,8 +23,7 @@ export default function TextInput({
   error = false,
   className,
   ...props
-}: TextInputProps) {
-  return (
+}) => (
     <div className={cx("field", { "is-inline": inline })}>
       {label && <label htmlFor={name}>{label}</label>}
       <input
@@ -32,14 +32,15 @@ export default function TextInput({
         className={cx(
           "input",
           {
+            "is-error": error,
             "is-success": success,
             "is-warning": warning,
-            "is-error": error
           },
-          className
+          className,
         )}
         {...props}
       />
     </div>
   );
-}
+
+export default TextInput;

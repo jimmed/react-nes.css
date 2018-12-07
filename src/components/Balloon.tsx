@@ -1,33 +1,34 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
-export type BalloonProps = {
+export interface BalloonProps {
   children: React.ReactNode;
   className: string;
   fromLeft: boolean;
   fromRight: boolean;
-};
+}
 
-export default function Balloon({
+
+const Button: React.SFC<BalloonProps> = ({
   children,
   fromLeft = false,
   fromRight = false,
   className,
   ...props
-}: BalloonProps) {
-  return (
+}) => (
     <div
       className={cx(
         "balloon",
         {
           "from-left": fromLeft,
-          "from-right": fromRight
+          "from-right": fromRight,
         },
-        className
+        className,
       )}
       {...props}
     >
       {children}
     </div>
   );
-}
+
+export default Button;

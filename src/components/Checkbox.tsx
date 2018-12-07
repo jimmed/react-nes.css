@@ -2,6 +2,8 @@ import LabelledInput, { LabelledInputProps } from "./LabelledInput";
 
 export type CheckboxProps = LabelledInputProps;
 
-export default function Checkbox(props: CheckboxProps) {
-  return LabelledInput({ ...props, type: "checkbox" });
-}
+const Checkbox: React.SFC<CheckboxProps> = (props) => (
+  LabelledInput({ ...props, type: "checkbox" })
+);
+
+export default Checkbox;

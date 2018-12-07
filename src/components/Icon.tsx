@@ -1,5 +1,5 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
 export type IconName =
   | "close"
@@ -10,29 +10,29 @@ export type IconName =
   | "star"
   | "twitter";
 
-export type IconProps = {
+export interface IconProps {
   name: IconName;
   className: string;
   medium: boolean;
   large: boolean;
-};
+}
 
-export default function Icon({
+const Icon: React.SFC<IconProps> = ({
   name,
   className,
   medium = false,
   large = false,
   ...props
-}: IconProps) {
-  return (
+}) => (
     <i
       className={cx(
         "icon",
         name,
         { "is-medium": medium, "is-large": large },
-        className
+        className,
       )}
       {...props}
     />
   );
-}
+
+export default Icon;

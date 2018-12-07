@@ -1,16 +1,16 @@
-import * as React from "react";
 import cx from "classnames";
+import * as React from "react";
 
-export type ContainerProps = {
+export interface CheckboxProps {
   children: React.ReactNode;
   title: string;
   center: boolean;
   dark: boolean;
   rounded: boolean;
   className: string;
-};
+}
 
-export default function Container({
+const Checkbox: React.SFC<CheckboxProps> = ({
   children,
   title,
   center = false,
@@ -18,19 +18,19 @@ export default function Container({
   rounded = false,
   className,
   ...props
-}: ContainerProps) {
+}) => {
   const hasTitle = title != null;
   return (
     <section
       className={cx(
         "container",
         {
-          "with-title": hasTitle,
           "is-center": center,
           "is-dark": dark,
-          "is-rounded": rounded
+          "is-rounded": rounded,
+          "with-title": hasTitle,
         },
-        className
+        className,
       )}
       {...props}
     >
@@ -38,4 +38,6 @@ export default function Container({
       {children}
     </section>
   );
-}
+};
+
+export default Checkbox;
