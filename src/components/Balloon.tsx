@@ -9,7 +9,7 @@ export interface BalloonProps {
 }
 
 
-const Button: React.SFC<BalloonProps> = ({
+const Balloon: React.SFC<BalloonProps> = ({
   children,
   fromLeft = false,
   fromRight = false,
@@ -31,4 +31,4 @@ const Button: React.SFC<BalloonProps> = ({
     </div>
   );
 
-export default Button;
+export default Balloon;
